@@ -1,5 +1,4 @@
 <?php
-
 class QuizClass {
 
    private $questionsAndCorrectAnswers; // ej: $questionsAndCorrectAnswers = ["q1"=> ["question", "correctAnswer"],...]
@@ -22,7 +21,7 @@ class QuizClass {
 
     public function setUserAnswers($userAnswers){
 
-            $this->userAnswers = $_POST;
+            $this->userAnswers = $userAnswers;
 
 
     }
