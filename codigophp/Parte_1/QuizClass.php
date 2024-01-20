@@ -21,9 +21,9 @@ class QuizClass {
     // Getter/Setter
 
     public function setUserAnswers($userAnswers){
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST)){
+
             $this->userAnswers = $_POST;
-        }
+
 
     }
 
@@ -32,40 +32,65 @@ class QuizClass {
     }
 
 
-    public function __construct($questionsAndCorrectAnswers) {
+    public function __construct($questionsAndCorrectAnswers, $userAnswers) {
 
         $this->questionsAndCorrectAnswers = $questionsAndCorrectAnswers;
+        $this->userAnswers = $userAnswers;
 
     }
 
 
-    public function handlePoints($userAnswers, $questionsAndCorrectAnswers) {
+    public function handlePoints(): int{
 
         $points = 0;
-        foreach ($userAnswers as $answerKey => $answerValue){
-            if ($questionsAndCorrectAnswers[$answerKey][1] === $answerValue) $points += 10;
+
+        foreach ( $this->userAnswers as $answerKey => $answerValue){
+            if ($this->questionsAndCorrectAnswers[$answerKey][1] === $answerValue) $points += 10;
             }
 
         $_SESSION["points"] = $points;
+        return $points;
 
     }
 
-    public function handleComments($userAnswers, $questionsAndCorrectAnswers){
+    public function handleComments(): array
+    {
         $comments = [];
 
-        foreach ($userAnswers as $answerKey => $answerValue){
-            if ($questionsAndCorrectAnswers[$answerKey][1] !== $answerValue) $comments[$answerKey] = "must study a bit more";
+        foreach ($this->userAnswers as $answerKey => $answerValue){
+            if ($this->questionsAndCorrectAnswers[$answerKey][1] !== $answerValue) $comments[$answerKey] = "must study a bit more";
         }
 
-        $_SESSION["commnets"] = $comments;
+        $_SESSION["comments"] = $comments;
+        return  $comments;
 
 
     }
 
-    public function showError($questionKey){
 
+    public function isChecked($questionKey, $response){
+        return (isset($_POST[$questionKey]) && $_POST[$questionKey]== $response) ? "checked" : "";
     }
 
+    public function isNotAnswered($questionKey){
+         return $_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST[$questionKey]) ? "You must answer all questions" : "";
+    }
 
 
 }
+
+// Now we check the class
+
+$questionsAndCorrectAnswers = [
+    "q1" => ["2 + 2?", "b"],
+    "q2" => ["capital of France?", "a"],
+];
+
+$userAnswers = ["q1"=>"c", "q2"=>"c"];
+
+$quiz = new QuizClass($questionsAndCorrectAnswers, $userAnswers);
+
+$quiz->setUserAnswers(["q1"=>"c", "q2"=>"a"]);
+
+echo $quiz->handlePoints();
+echo implode(",",$quiz->handleComments());
