@@ -1,8 +1,18 @@
 <?php
 
 $messageError = "You must answer all questions";
-var_dump($_POST);
-
+$correctAnswers = [
+    "q1" => "b",
+    "q2" => "b",
+    "q3" => "a",
+    "q4" => "a",
+    "q5" => "a",
+    "q6" => "a",
+    "q7" => "a",
+    "q8" => "a",
+    "q9" => "c",
+    "q10" => "b"
+];
 
 ?>
 
@@ -12,7 +22,7 @@ var_dump($_POST);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Quiz</title>
-    <link rel="stylesheet" href="quizz.css">
+    <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
 
