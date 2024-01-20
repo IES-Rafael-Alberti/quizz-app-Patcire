@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c44fe3e1-2330-4a7f-8a4a-eabbe55989fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plantillas/ExampleQuizzes.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plantillas/quiz.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plantillas/quiz.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigophp/Parte_1/process.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_1/process.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_1/quizz.css" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_1/quizz.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_1/quizz.html" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_1/quizz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_1/quizz.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_1/quizz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-data/aria_log.00000001" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/aria_log.00000001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-data/aria_log_control" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/aria_log_control" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db-data/ddl_recovery.log" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/ddl_recovery.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db-data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-data/undo001" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/undo001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-data/undo002" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/undo002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-data/undo003" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/undo003" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +111,8 @@
       <workItem from="1705657900386" duration="698000" />
       <workItem from="1705661882857" duration="6197000" />
       <workItem from="1705681532070" duration="1903000" />
-      <workItem from="1705683681734" duration="7555000" />
+      <workItem from="1705683681734" duration="9760000" />
+      <workItem from="1705770304561" duration="7624000" />
     </task>
     <servers />
   </component>

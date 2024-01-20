@@ -1,9 +1,18 @@
 <?php
+    session_start();
+    $arrayLength = count($_POST);
+    $responses = [];
 
-function checkQuestions($q)
-{
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        for ($i=1; $i<=$arrayLength; $i++){
+            $questionName = "q".$i;
+            // $notAnsweredQuestions[$questionName]= empty($_POST[$questionName]);
+             (empty($_POST[$questionName])) ?
+                 $responses[$questionName] = false
+                 :
+                 $responses[$questionName] = $_POST[$questionName];
 
-    return $_SERVER["REQUEST_METHOD"] == "POST" && empty($_POST[$q]);
+        }
+    }
 
-}
-?>
+    $_SESSION["responses"]=$responses;
