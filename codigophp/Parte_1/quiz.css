@@ -56,3 +56,19 @@ input[type="submit"]:hover {
     color: rgba(255, 0, 0, 0.71);
     font-weight: bold;
 }
+
+.results{
+    background-color: lightgoldenrodyellow;
+}
+
+.again{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.again:hover{
+    background-color: #0056b3;
+}

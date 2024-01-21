@@ -17,7 +17,9 @@ $userAnswers = [];
 
 isset($_POST) && $userAnswers = $_POST;
 
-$quiz = new QuizClass($questionsAndCorrectAnswers, $userAnswers)
+$quiz = new QuizClass($questionsAndCorrectAnswers, $userAnswers);
+
+//var_dump($quiz->getUserAnswers());
 
 ?>
 
@@ -120,5 +122,28 @@ $quiz = new QuizClass($questionsAndCorrectAnswers, $userAnswers)
     <p class="p__error"><?php echo $quiz->isNotAnswered("q10")?></p>
     <input type="submit" value="Submit">
 </form>
+
+<section class="results">
+
+<?php
+
+if ($quiz->allQuestionAnswered()){
+    echo "<h1>Resultados</h1>";
+    $results = $quiz->showResultsWithComments();
+    $counter = 1;
+    foreach ($results as $questionKey => $resultValue){
+
+        echo "<p> <strong>Question $counter</strong>. $resultValue</p>";
+        $counter++;
+
+    }
+    $points = $quiz->handlePoints()."/100";
+    echo "<h3>Total points: $points</h3>";
+    echo "<button class='again' onclick=''>Solve again<button>";
+}
+
+?>
+</section>
+
 </body>
 </html>

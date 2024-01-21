@@ -43,26 +43,12 @@ class QuizClass {
 
         $points = 0;
 
-        foreach ( $this->userAnswers as $answerKey => $answerValue){
-            if ($this->questionsAndCorrectAnswers[$answerKey][1] === $answerValue) $points += 10;
+        foreach ( $this->userAnswers as $questionKey => $answerValue){
+            if (isset($this->questionsAndCorrectAnswers[$questionKey]) && $this->questionsAndCorrectAnswers[$questionKey] === $answerValue) $points += 10;
             }
 
         $_SESSION["points"] = $points;
         return $points;
-
-    }
-
-    public function handleComments(): array
-    {
-        $comments = [];
-
-        foreach ($this->userAnswers as $answerKey => $answerValue){
-            if ($this->questionsAndCorrectAnswers[$answerKey][1] !== $answerValue) $comments[$answerKey] = "must study a bit more";
-        }
-
-        $_SESSION["comments"] = $comments;
-        return  $comments;
-
 
     }
 
@@ -75,6 +61,27 @@ class QuizClass {
          return $_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST[$questionKey]) ? "You must answer all questions" : "";
     }
 
+    public function allQuestionAnswered(): bool{
+        return  count($this->userAnswers) === count($this->questionsAndCorrectAnswers);
+    }
+
+    public function showResultsWithComments(){ // this method add  comments to every answer too
+
+        $results = [];
+        foreach ( $this->userAnswers as $questionKey => $userAnswer){
+
+            if (isset($this->questionsAndCorrectAnswers[$questionKey]) && $this->questionsAndCorrectAnswers[$questionKey] === $userAnswer){
+
+                $results[$questionKey] =  "your answer was correct! +10 points";
+            }
+            else{
+                $results[$questionKey] = "fail. The correct answer is: ".$this->questionsAndCorrectAnswers[$questionKey];
+            }
+        }
+
+        return  $results;
+
+    }
 
 }
 
@@ -91,5 +98,5 @@ $quiz = new QuizClass($questionsAndCorrectAnswers, $userAnswers);
 
 $quiz->setUserAnswers(["q1"=>"c", "q2"=>"a"]);
 
-echo $quiz->handlePoints();
-echo implode(",",$quiz->handleComments());
+//echo $quiz->handlePoints();
+//echo $quiz->showResultsWithComments();
