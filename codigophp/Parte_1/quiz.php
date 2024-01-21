@@ -15,7 +15,8 @@ $questionsAndCorrectAnswers = [
 
 $userAnswers = [];
 
-isset($_POST) && $userAnswers = $_POST;
+(isset($_GET['retake']) && $_GET['retake']) && $userAnswers = [];
+!empty($_POST) && $userAnswers = $_POST;
 
 $quiz = new QuizClass($questionsAndCorrectAnswers, $userAnswers);
 
@@ -139,7 +140,7 @@ if ($quiz->allQuestionAnswered()){
     }
     $points = $quiz->handlePoints()."/100";
     echo "<h3>Total points: $points</h3>";
-    echo "<button class='again' onclick=''>Solve again<button>";
+    echo "<button class='again' onclick=\"window.location.href='?retake=true'\">Solve again<button>";
 }
 
 ?>
