@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c44fe3e1-2330-4a7f-8a4a-eabbe55989fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-data/aria_log.00000001" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/aria_log.00000001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-data/aria_log_control" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/aria_log_control" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-data/ddl_recovery.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/db-data/ib_buffer_pool" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-data/ibtmp1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_2/initSQL/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_2/initSQL/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +121,7 @@
       <workItem from="1705770304561" duration="18181000" />
       <workItem from="1705834198738" duration="6806000" />
       <workItem from="1705907274221" duration="995000" />
-      <workItem from="1705909383554" duration="3852000" />
+      <workItem from="1705909383554" duration="4534000" />
     </task>
     <servers />
   </component>

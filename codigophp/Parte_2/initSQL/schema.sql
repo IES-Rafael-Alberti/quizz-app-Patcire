@@ -16,5 +16,8 @@ CREATE TABLE questions (
         option_c VARCHAR(255),
         option_d VARCHAR(255),
         correct_option CHAR(1),
+        question_type VARCHAR(50) NOT NULL,
+        question_details TEXT,
         FOREIGN KEY (quiz_id) REFERENCES quizzes(quiz_id)
 );
+
