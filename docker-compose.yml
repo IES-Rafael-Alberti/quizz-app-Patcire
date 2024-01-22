@@ -19,11 +19,18 @@ services:
       - "host.docker.internal:host-gateway"
 
   db:
-    image: mariadb
-    volumes:
-      - ./db-data:/var/lib/mysql/
-    environment:
-      MYSQL_ROOT_PASSWORD: pestillo
+      image: mysql
+      command: --default-authentication-plugin=caching_sha2_password
+      restart: always
+      environment:
+        MYSQL_ROOT_PASSWORD: user
+        MYSQL_DATABASE: quizz-app
+        MYSQL_USER: user
+        MYSQL_PASSWORD: user
+      ports:
+        - "3306:3306"
+      volumes:
+        - ./codigophp/Parte_2/initSQL:/docker-entrypoint-initdb.d
 
   phpmyadmin:
     image: phpmyadmin
