@@ -1,6 +1,6 @@
 --  tabla de cuestionarios
 CREATE TABLE quizzes (
-        quiz_id INT PRIMARY KEY,
+        quiz_id INT AUTO_INCREMENT PRIMARY KEY,
         title VARCHAR(255),
         description TEXT,
         created_at DATETIME
@@ -8,8 +8,8 @@ CREATE TABLE quizzes (
 
 -- tabla de preguntas
 CREATE TABLE questions (
-        question_id INT PRIMARY KEY,
-        quiz_id INT,
+        question_id INT  AUTO_INCREMENT PRIMARY KEY,
+        fk_quiz_id INT,
         question_text TEXT,
         option_a VARCHAR(255),
         option_b VARCHAR(255),
@@ -18,6 +18,7 @@ CREATE TABLE questions (
         correct_option CHAR(1),
         question_type VARCHAR(50) NOT NULL,
         question_details TEXT,
-        FOREIGN KEY (quiz_id) REFERENCES quizzes(quiz_id)
+        FOREIGN KEY (fk_quiz_id) REFERENCES quizzes(quiz_id)
 );
+
 
