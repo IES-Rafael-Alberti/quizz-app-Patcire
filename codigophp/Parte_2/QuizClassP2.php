@@ -40,6 +40,23 @@ class QuizClassP2{
     }
     */
 
+    public function showQuizFromDataBase(){
 
+        $connection = mysqli_connect("db", "user", "user", "quizz-app");
+
+        $sql = "select * from questions";
+        $result = mysqli_query($connection, $sql);
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {?>
+                <article class="question">
+                    <p> <?= $row['question_text']?> </p>
+                    <label><input type="radio" name="question_<?= $row["question_id"]?>"> <?= $row["option_a"] ?></label>
+                    <label><input type="radio" name="question_<?= $row["question_id"]?>"> <?= $row["option_b"] ?></label>
+                    <label><input type="radio" name="question_<?= $row["question_id"]?>"> <?= $row["option_c"] ?></label>
+                </article>
+            <?php }
+            mysqli_close($connection);
+        }
+    }
 
 } // class end
