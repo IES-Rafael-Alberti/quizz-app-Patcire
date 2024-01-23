@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c44fe3e1-2330-4a7f-8a4a-eabbe55989fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_2/initSQL/create-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_2/initSQL/00-create-db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_2/initSQL/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_2/initSQL/01-schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_2/quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_2/quiz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire\codigophp" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.db: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -98,8 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +132,8 @@
       <workItem from="1705950744072" duration="4942000" />
       <workItem from="1705995938673" duration="609000" />
       <workItem from="1705996735198" duration="97000" />
-      <workItem from="1705997254615" duration="1594000" />
+      <workItem from="1705997254615" duration="4333000" />
+      <workItem from="1706029459736" duration="985000" />
     </task>
     <servers />
   </component>

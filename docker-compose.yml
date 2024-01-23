@@ -17,6 +17,11 @@ services:
     # Sólo en máquinas Linux, comentar estas dos líneas en otros sistemas de lusers
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    # Install MySQLi extension
+    command: /bin/bash -c "apt-get update && apt-get install -y \
+      && docker-php-ext-install mysqli \
+      && docker-php-ext-enable mysqli \
+      && php-fpm"
 
   db:
       image: mysql
