@@ -1,6 +1,11 @@
 <?php
+
 include 'QuizClassP2.php';
-$quiz = new QuizClassP2;
+$quiz = new QuizClassP2(1);
+$userAnswers = [];
+(isset($_GET['retake']) && $_GET['retake']) && $userAnswers = [];
+!empty($_POST) && $userAnswers = $_POST;
+
 ?>
 
 <!DOCTYPE html>
@@ -14,16 +19,17 @@ $quiz = new QuizClassP2;
 <body>
 
 <form method="post">
+
     <h1>PHP Quiz</h1>
-
     <?php $quiz->showQuizFromDataBase(); ?>
-
     <input type="submit" value="Submit">
+
 </form>
 
 
 <section class="results">
-    
+
+    <?php $quiz->showResults($userAnswers);?>
 </section>
 
 </body>
