@@ -111,7 +111,11 @@ a:hover{
     border: 10px;
 }
 
-li:hover{
-
-
+.button__delete{
+    border: 2px;
+    font-weight: bold;
+}
+.button__delete:hover{
+    background-color: red;
+    cursor: pointer;
 }

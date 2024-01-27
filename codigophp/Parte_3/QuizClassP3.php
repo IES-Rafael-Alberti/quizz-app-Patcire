@@ -91,6 +91,28 @@ class QuizClassP3{
     }
 
 
+    public function deleteFromDB($question_id){
+        $connection = mysqli_connect("db", "user", "user", "quizz-app");
+        $sql = "delete from questions where question_id = $question_id";
+        $result = mysqli_query($connection, $sql);
+        mysqli_close($connection);
+
+    }
+
+
+    public function showOnlyquestions(){
+        $infoQuestions = $this->getQuizFromDataBase();
+        foreach ($infoQuestions as $question) {?>
+            <form method="post">
+                <input type="hidden" name="question_id" value="<?= $question['question_id'] ?>">
+                <button type="submit" name="delete_question">
+                    <p><?= $question['question_text'] ?></p>
+                </button>
+            </form>
+            <?php
+        }
+    }
+
 
     public function allQuestionAnswered(): bool{
         return  count($this->userAnswers) === count($this->questionsAndCorrectAnswers);
@@ -130,6 +152,8 @@ class QuizClassP3{
 
         }
     }
+
+
 
 
 } // class end
