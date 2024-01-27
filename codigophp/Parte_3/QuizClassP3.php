@@ -129,8 +129,12 @@ class QuizClassP3{
 
     public function deleteFromDB($question_id){
         $connection = mysqli_connect("db", "user", "user", "quizz-app");
-        $sql = "delete from questions where question_id = $question_id";
-        mysqli_query($connection, $sql);
+        $sql = "delete from questions where question_id = ?";
+        $prepared = mysqli_prepare($connection, $sql);
+
+        mysqli_stmt_bind_param($prepared, "i", $question_id); // i for integer
+        mysqli_stmt_execute($prepared);
+        mysqli_stmt_close($prepared);
         mysqli_close($connection);
 
     }
@@ -167,10 +171,14 @@ class QuizClassP3{
                 option_b = '$new_option_b',
                 option_c = '$new_option_c',
                 correct_option = '$new_correct_option'
-            where question_id = $question_id";
+            where question_id = ?";
 
-        mysqli_query($connection, $sql);
-        mysqli_close($connection);
+    $prepared = mysqli_prepare($connection, $sql);
+
+    mysqli_stmt_bind_param($prepared, "i", $question_id);
+    mysqli_stmt_execute($prepared);
+    mysqli_stmt_close($prepared);
+    mysqli_close($connection);
 
     }
 
