@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c44fe3e1-2330-4a7f-8a4a-eabbe55989fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_3/quizP3.css" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_3/quizP3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_3/quizP3.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_3/quizP3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_3/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_3/read.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,12 +139,23 @@
       <workItem from="1706255761845" duration="6341000" />
       <workItem from="1706288710040" duration="2674000" />
       <workItem from="1706294451300" duration="597000" />
-      <workItem from="1706359289061" duration="7885000" />
+      <workItem from="1706359289061" duration="8279000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
