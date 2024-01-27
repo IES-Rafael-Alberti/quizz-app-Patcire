@@ -7,11 +7,7 @@
     <list default="true" id="c44fe3e1-2330-4a7f-8a4a-eabbe55989fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigophp/Parte_3/QuizClassP3.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_3/QuizClassP3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_3/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_3/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_3/quizP3.css" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_3/quizP3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_3/quizP3.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_3/quizP3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_3/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_3/read.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_3/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_3/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_3/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_3/create.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +140,7 @@
       <workItem from="1706255761845" duration="6341000" />
       <workItem from="1706288710040" duration="2674000" />
       <workItem from="1706294451300" duration="597000" />
-      <workItem from="1706359289061" duration="21319000" />
+      <workItem from="1706359289061" duration="23109000" />
     </task>
     <servers />
   </component>

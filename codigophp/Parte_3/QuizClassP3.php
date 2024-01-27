@@ -174,6 +174,41 @@ class QuizClassP3{
 
     }
 
+    public function showFormToAddQuestion(){?>
+
+        <form method="post">
+
+                <label>Question: <input name="new_question_text" style="width: 500px"></label>
+                <label>a: <input  name="new_option_a" style="background-color: antiquewhite"></label>
+                <label>b: <input name="new_option_b" style="background-color: antiquewhite"></label>
+                <label>c: <input name="new_option_c" style="background-color: antiquewhite"></label>
+                <label>Correct option <input name="new_correct_option" style="background-color: #bdd7a5"></label>
+                        <button type="submit" name="handle_question" class="again">Add</button>
+            </form>
+        <?php
+    }
+
+    public function addQuestion(){
+        $connection = mysqli_connect("db", "user", "user", "quizz-app");
+        $new_question_text = mysqli_real_escape_string($connection, $_POST['new_question_text']);
+        $new_option_a = mysqli_real_escape_string($connection, $_POST['new_option_a']);
+        $new_option_b = mysqli_real_escape_string($connection, $_POST['new_option_b']);
+        $new_option_c = mysqli_real_escape_string($connection, $_POST['new_option_c']);
+        $new_correct_option = mysqli_real_escape_string($connection, $_POST['new_correct_option']);
+        $sql = "insert into questions (fk_quiz_id, question_text, option_a, option_b, option_c, correct_option, question_type) values
+                ('1',
+                 '$new_question_text',
+                '$new_option_a',
+                '$new_option_b',
+                '$new_option_c',
+                '$new_correct_option',
+                 'multiple_choice')";
+
+        mysqli_query($connection, $sql);
+        mysqli_close($connection);
+
+    }
+
 
 } // class end
 
