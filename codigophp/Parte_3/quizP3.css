@@ -111,3 +111,25 @@ li{
     width: 35px;
 
 }
+
+ul{
+    list-style:outside none none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+
+a:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color: #00000b;
+    border: 10px;
+}

@@ -54,18 +54,18 @@ class QuizClassP3{
         foreach ($infoQuestions as $question) {?>
             <article class="question">
                 <p> <?= $question['question_text']?> </p>
-                <label>
+                <label>a)
                     <input type="radio" value="a" name="<?= $question["question_id"]?>" <?php echo $this->isChecked($question['question_id'], "a") ?>>
                     <?= $question["option_a"] ?>
 
                 </label>
-                <label>
+                <label> b)
                     <input type="radio" value="b" name="<?= $question["question_id"]?>"<?php echo $this->isChecked($question['question_id'], "b") ?>>
                     <?= $question["option_b"] ?>
 
                 </label>
-                <label>
-                    <input type="radio" value="c" name="<?= $question["question_id"]?> <?php echo $this->isChecked($question['question_id'], "c") ?>">
+                <label> c)
+                    <input type="radio" value="c" name="<?= $question["question_id"]?>" <?php echo $this->isChecked($question['question_id'], "c") ?>">
                     <?= $question["option_c"] ?>
                 </label>
 
@@ -103,7 +103,7 @@ class QuizClassP3{
 
             }
 
-            echo "<h3>Total points: $points/100</h3>";
+            echo "<h3>Total points: $points/" . count($infoQuestions) *10 . "</h3>";
             echo "<button class='again' onclick=\"window.location.href='?retake=true'\">Solve again<button>";
 
 
@@ -118,7 +118,7 @@ class QuizClassP3{
         foreach ($infoQuestions as $question) {?>
             <form method="post">
                 <input type="hidden" name="question_id" value="<?= $question['question_id'] ?>">
-                <button type="submit" name="delete_question">
+                <button type="submit" name="handle_question">
                     <p><?= $question['question_text'] ?></p>
                 </button>
             </form>
@@ -130,10 +130,50 @@ class QuizClassP3{
     public function deleteFromDB($question_id){
         $connection = mysqli_connect("db", "user", "user", "quizz-app");
         $sql = "delete from questions where question_id = $question_id";
-        $result = mysqli_query($connection, $sql);
+        mysqli_query($connection, $sql);
         mysqli_close($connection);
 
     }
+
+    public  function showQuestionsToUpdate(){
+
+        $infoQuestions = $this->getQuizFromDataBase();
+        foreach ($infoQuestions as $question){?>
+            <form method="post">
+                <input type="hidden" name="question_id" value="<?= $question['question_id'] ?>">
+                <label><input name="new_question_text" style="width: 500px" value="<?php echo $question['question_text'] ?>"></label>
+                <label>a: <input  name="new_option_a" style="background-color: antiquewhite" value="<?php echo $question['option_a'] ?>"></label>
+                <label>b: <input name="new_option_b" style="background-color: antiquewhite" value="<?php echo $question['option_b'] ?>"></label>
+                <label>c: <input name="new_option_c" style="background-color: antiquewhite" value="<?php echo $question['option_c'] ?>"></label>
+                <label>Correct option <input name="new_correct_option" style="background-color: #bdd7a5" value="<?php echo $question['correct_option'] ?>"></label>
+                        <button type="submit" name="handle_question" class="again">Update</button>
+            </form>
+            <?php
+        }
+
+    }
+
+    public function updateQuestion($question_id){
+        $connection = mysqli_connect("db", "user", "user", "quizz-app");
+        $new_question_text = mysqli_real_escape_string($connection, $_POST['new_question_text']);
+        $new_option_a = mysqli_real_escape_string($connection, $_POST['new_option_a']);
+        $new_option_b = mysqli_real_escape_string($connection, $_POST['new_option_b']);
+        $new_option_c = mysqli_real_escape_string($connection, $_POST['new_option_c']);
+        $new_correct_option = mysqli_real_escape_string($connection, $_POST['new_correct_option']);
+
+        $sql = "update questions set 
+                question_text = '$new_question_text',
+                option_a = '$new_option_a',
+                option_b = '$new_option_b',
+                option_c = '$new_option_c',
+                correct_option = '$new_correct_option'
+            where question_id = $question_id";
+
+        mysqli_query($connection, $sql);
+        mysqli_close($connection);
+
+    }
+
 
 } // class end
 

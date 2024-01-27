@@ -14,13 +14,18 @@ $quiz = new QuizClassP3(1);
     <title>Delete</title>
 </head>
 <body>
-    <a class="again" href="index.html">Menu</a>
+    <?php
+    $infoQuestions = $quiz->getQuizFromDataBase();
+    if (isset($_POST['handle_question'])) {
+        echo "<h2 style='background-color: #5fda5f' >Question is now deleted. Go to the quiz to see it!</h2>";
+    }
+    ?>
     <h1>Delete a question</h1>
+    <a class="again" href="index.html">Menu</a>
     <?php $quiz->showOnlyquestions();
-    if (isset($_POST['delete_question'])){
+    if (isset($_POST['handle_question'])){
         $quiz->deleteFromDB($_POST['question_id']);
-        unset($_POST['delete_question']);
-         echo "<p class='p__error'>Question deleted!</p>";
+
     }
     ?>
 
