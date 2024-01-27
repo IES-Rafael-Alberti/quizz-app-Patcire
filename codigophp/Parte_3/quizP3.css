@@ -6,7 +6,6 @@ body {
     text-align: center;
 }
 
-
 h1 {
     background-color: #007bff;
     color: #fff;
@@ -73,6 +72,7 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+
 ul{
     list-style:outside none none;
     display: flex;
@@ -97,20 +97,6 @@ li{
 
 }
 
-a{
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-}
-
-
-a:hover{
-    text-decoration: none;
-    font-weight: bold;
-    color: #00000b;
-    border: 10px;
-}
-
 .button__delete{
     border: 2px;
     font-weight: bold;
@@ -118,4 +104,10 @@ a:hover{
 .button__delete:hover{
     background-color: red;
     cursor: pointer;
+}
+
+.goback{
+    background-color: #007bff;
+    width: 35px;
+
 }

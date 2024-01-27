@@ -17,20 +17,20 @@ $userAnswers = [];
     <link rel="stylesheet" href="quizP3.css">
 </head>
 <body>
+    <a class="again" href="index.html">Menu</a>
+    <form method="post">
 
-<form method="post">
+        <h1>PHP Quiz</h1>
+        <?php $quiz->showQuizFromDataBase(); ?>
+        <input type="submit" value="Submit">
 
-    <h1>PHP Quiz</h1>
-    <?php $quiz->showQuizFromDataBase(); ?>
-    <input type="submit" value="Submit">
-
-</form>
+    </form>
 
 
-<section class="results">
+    <section class="results">
 
-    <?php $quiz->showResults($userAnswers);?>
-</section>
+        <?php $quiz->showResults($userAnswers);?>
+    </section>
 
 </body>
 </html>
