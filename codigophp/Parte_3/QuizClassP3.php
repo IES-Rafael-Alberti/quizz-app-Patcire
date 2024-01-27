@@ -2,40 +2,25 @@
 
 class QuizClassP3{
 
-    private $userAnswers; // ej: $userAnswers = ["q1" => "a"]
-
-    // Getter/Setter
-
-    public function setUserAnswers($userAnswers){
-
-        $this->userAnswers = $userAnswers;
-
-
-    }
-
-    public function getUserAnswers(){
-        return $this->userAnswers;
-    }
-
+    // Class properties and construct
     private $quiz_id;
-
 
     public function setQuizId($quiz_id): void{
         $this->quiz_id = $quiz_id;
     }
 
-    public function getQuizId()
-    {
+    public function getQuizId(){
         return $this->quiz_id;
     }
 
-
     public function __construct( $quiz_id) {
 
-        //$this->userAnswers = $userAnswers;
         $this->quiz_id = $quiz_id;
 
     }
+
+
+    // General Methods
 
     public function getQuizFromDataBase(){
 
@@ -90,34 +75,6 @@ class QuizClassP3{
         <?php }
     }
 
-
-    public function deleteFromDB($question_id){
-        $connection = mysqli_connect("db", "user", "user", "quizz-app");
-        $sql = "delete from questions where question_id = $question_id";
-        $result = mysqli_query($connection, $sql);
-        mysqli_close($connection);
-
-    }
-
-
-    public function showOnlyquestions(){
-        $infoQuestions = $this->getQuizFromDataBase();
-        foreach ($infoQuestions as $question) {?>
-            <form method="post">
-                <input type="hidden" name="question_id" value="<?= $question['question_id'] ?>">
-                <button type="submit" name="delete_question">
-                    <p><?= $question['question_text'] ?></p>
-                </button>
-            </form>
-            <?php
-        }
-    }
-
-
-    public function allQuestionAnswered(): bool{
-        return  count($this->userAnswers) === count($this->questionsAndCorrectAnswers);
-    }
-
     public function  showResults($userAnswers){
 
         $results = [];
@@ -127,13 +84,13 @@ class QuizClassP3{
         if (count($infoQuestions) === count($userAnswers)) {
 
             echo "<h1>Resultados</h1>";
-            for ($i = 1; $i <= count($infoQuestions); $i++) {
-                if ($userAnswers[$i] === $infoQuestions[$i]['correct_option']) {
+            foreach ($infoQuestions as $question) {
+                if ($userAnswers[$question['question_id']] === $question['correct_option']) {
                     $points += 10;
                     $results[] = "Your answer was correct. +10 points!";
                 }
                 else{
-                    $results[] = "fail. The correct answer is " . $infoQuestions[$i]['correct_option'];
+                    $results[] = "fail. The correct answer is " . $question['correct_option'];
                 }
 
             }
@@ -154,7 +111,29 @@ class QuizClassP3{
     }
 
 
+    // CRUD Methods
 
+    public function showOnlyquestions(){
+        $infoQuestions = $this->getQuizFromDataBase();
+        foreach ($infoQuestions as $question) {?>
+            <form method="post">
+                <input type="hidden" name="question_id" value="<?= $question['question_id'] ?>">
+                <button type="submit" name="delete_question">
+                    <p><?= $question['question_text'] ?></p>
+                </button>
+            </form>
+            <?php
+        }
+    }
+
+
+    public function deleteFromDB($question_id){
+        $connection = mysqli_connect("db", "user", "user", "quizz-app");
+        $sql = "delete from questions where question_id = $question_id";
+        $result = mysqli_query($connection, $sql);
+        mysqli_close($connection);
+
+    }
 
 } // class end
 
