@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c44fe3e1-2330-4a7f-8a4a-eabbe55989fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\ESCRITORIO\DAW\xampp\php\php.exe" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -35,12 +37,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.dbP4: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/ESCRITORIO/DAW/00-SERVIDORES/quizz-app-Patcire/codigophp/Parte_3",
+    "last_opened_file_path": "D:/ESCRITORIO/DAW/00-SERVIDORES/quizz-app-Patcire/codigophp/Parte_4/quiz_files",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,17 +60,20 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire\codigophp\Parte_4\quiz_files" />
+      <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire\codigophp\Parte_4" />
       <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire\codigophp\Parte_3" />
       <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire\codigophp\Parte_2" />
       <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire\codigophp\Parte_1" />
-      <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire\codigophp\Parte_4" />
+      <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire\codigophp\Parte_4\quizFiles" />
       <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire\codigophp\Parte_2\initSQL" />
       <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire\codigophp" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml.dbP4: Compose Deployment">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -77,6 +83,19 @@
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.dbP4: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="dbP4" />
+            </list>
+          </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
@@ -97,8 +116,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.dbP4: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -140,6 +160,8 @@
       <workItem from="1706294451300" duration="597000" />
       <workItem from="1706359289061" duration="25003000" />
       <workItem from="1706513526624" duration="75000" />
+      <workItem from="1706704005593" duration="3373000" />
+      <workItem from="1706727765401" duration="3616000" />
     </task>
     <servers />
   </component>
