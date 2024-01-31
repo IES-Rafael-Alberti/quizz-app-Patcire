@@ -35,7 +35,8 @@ services:
       ports:
         - "3306:3306"
       volumes:
-        - ./codigophp/Parte_2/initSQL:/docker-entrypoint-initdb.d
+        - ./codigophp/Parte_2/initSQL:/docker-entrypoint-initdb.d/part_2
+        - ./codigophp/Parte_4/initSQL:/docker-entrypoint-initdb.d/part_4
 
   phpmyadmin:
     image: phpmyadmin
