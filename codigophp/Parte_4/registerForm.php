@@ -1,3 +1,16 @@
+<?php
+    include 'User.php';
+
+    if (isset($_POST['handleRegister'])){
+
+        $newUser = new User($_POST['newUsername'], $_POST['newEmail'], $_POST['newPassword']);
+
+        $newUser->register();
+    }
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,11 +24,12 @@
 <body>
 
 <h1>Register</h1>
+<a class="again" href="index.html">Menu</a>
     <form method="post">
 
-        <label>Email <input name="newEmail" style="width: 500px"></label>
-        <label>Username: <input  name="newUsername" style="background-color: antiquewhite"></label>
-        <label>Password: <input name="newPassword" style="background-color: antiquewhite"></label>
+        <label>Email <input type="text" name="newEmail" style="width: 500px"></label>
+        <label>Username: <input  type="text" name="newUsername" style="background-color: antiquewhite"></label>
+        <label>Password: <input type="text" name="newPassword" style="background-color: antiquewhite"></label>
 
         <button type="submit" name="handleRegister" class="again">Register</button>
     </form>

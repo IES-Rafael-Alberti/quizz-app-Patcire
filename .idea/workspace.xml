@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c44fe3e1-2330-4a7f-8a4a-eabbe55989fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/initSQL/01-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/initSQL/01-schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/loginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/loginForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/registerForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/registerForm.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,30 +37,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-compose.yml.db: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.dbP4: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/ESCRITORIO/DAW/00-SERVIDORES/quizz-app-Patcire/codigophp/Parte_4/quiz_files",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.dbP4: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ESCRITORIO/DAW/00-SERVIDORES/quizz-app-Patcire/codigophp/Parte_4/quiz_files&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ESCRITORIO\DAW\00-SERVIDORES\quizz-app-Patcire\codigophp\Parte_4\quiz_files" />
@@ -161,7 +164,9 @@
       <workItem from="1706359289061" duration="25003000" />
       <workItem from="1706513526624" duration="75000" />
       <workItem from="1706704005593" duration="3373000" />
-      <workItem from="1706727765401" duration="3616000" />
+      <workItem from="1706727765401" duration="3935000" />
+      <workItem from="1706783881650" duration="1296000" />
+      <workItem from="1706805048866" duration="2083000" />
     </task>
     <servers />
   </component>

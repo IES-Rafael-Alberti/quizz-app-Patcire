@@ -9,8 +9,8 @@
     <title>Register</title>
 </head>
 <body>
-
 <h1>Register</h1>
+<a class="again" href="index.html">Menu</a>
 <form method="post">
 
 

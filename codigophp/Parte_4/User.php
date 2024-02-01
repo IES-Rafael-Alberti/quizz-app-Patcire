@@ -33,7 +33,7 @@ class User{
         $this->password = $password;
     }
 
-    // Constructor
+    // Constructors
 
     public function __construct( $username, $email, $password) {
 
@@ -83,9 +83,9 @@ class User{
         $newPasswordEncripted = password_hash($newPassword, PASSWORD_DEFAULT);
 
         $sql = "insert into users (username, email, password) values
-                ($newUsername,
-                 $newEmail,
-                 $newPasswordEncripted)";
+                ('$newUsername',
+                 '$newEmail',
+                 '$newPasswordEncripted')";
 
         mysqli_query($connection, $sql);
         mysqli_close($connection);
