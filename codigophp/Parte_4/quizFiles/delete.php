@@ -21,7 +21,7 @@ $quiz = new QuizClassP4(1);
     }
     ?>
     <h1>Delete a question</h1>
-    <a class="again" href="index.html">Menu</a>
+    <a class="again" href="index.php">Menu</a>
     <?php $quiz->showOnlyquestions();
     if (isset($_POST['handle_question'])){
         $quiz->deleteFromDB($_POST['question_id']);

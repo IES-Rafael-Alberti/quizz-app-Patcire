@@ -1,3 +1,21 @@
+<?php
+    session_start();
+     function logout(){
+        session_destroy();
+
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["logout"])) {
+
+        logout();
+        header("Location: ../index.html");
+        exit;
+
+    }
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,6 +37,11 @@
         <li><a href="read.php">Show Questions</a></li>
     </ul>
 </section>
+
+    <form method="post">
+        <button type="submit" class="again" name="logout">Logout</button>
+    </form>
+
 </body>
 </html>
 

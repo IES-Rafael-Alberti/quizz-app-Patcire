@@ -7,8 +7,14 @@
     <list default="true" id="c44fe3e1-2330-4a7f-8a4a-eabbe55989fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/initSQL/01-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/initSQL/01-schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/loginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/loginForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/quizP4.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/quizP4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/quizFiles/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigophp/Parte_4/registerForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigophp/Parte_4/registerForm.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +172,7 @@
       <workItem from="1706704005593" duration="3373000" />
       <workItem from="1706727765401" duration="3935000" />
       <workItem from="1706783881650" duration="1296000" />
-      <workItem from="1706805048866" duration="2083000" />
+      <workItem from="1706805048866" duration="7181000" />
     </task>
     <servers />
   </component>

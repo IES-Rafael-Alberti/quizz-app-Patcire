@@ -23,7 +23,7 @@ $userAnswers = [];
         echo "<h2 style='background-color: #5fda5f' >Your results are at the end of the page!</h2>";
     }
     ?>
-    <a class="again" href="index.html">Menu</a>
+    <a class="again" href="index.php">Menu</a>
     <form method="post">
 
         <h1>PHP Quiz</h1>

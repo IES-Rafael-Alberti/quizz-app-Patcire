@@ -1,3 +1,23 @@
+<?php
+include 'User.php';
+
+    function isnotAnswered($fieldName){
+        return $_SERVER["REQUEST_METHOD"] == "POST" && empty($_POST[$fieldName]) ? "<p class='p__error'>You must answer all questions</p>" : "";
+    }
+
+
+    if (!empty($_POST['username']) && !empty($_POST['password'])) {
+
+        $newUser = new User($_POST['username'], $_POST['email'], $_POST['password']);
+
+        $newUser->login();
+
+
+    }
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,8 +34,12 @@
 <form method="post">
 
 
-    <label>Username: <input  name="newUsername" style="background-color: antiquewhite"></label>
-    <label>Password: <input name="newPassword" style="background-color: antiquewhite"></label>
+    <label>Username: <input  name="username" style="background-color: antiquewhite"></label>
+    <?= isnotAnswered('username')?>
+    <label>Email: <input name="email" style="background-color: antiquewhite"></label>
+    <?= isnotAnswered('email')?>
+    <label>Password: <input name="password" style="background-color: antiquewhite"></label>
+    <?= isnotAnswered('username')?>
 
     <button type="submit" name="handleLogin" class="again">Login</button>
 </form>

@@ -23,7 +23,7 @@ $quiz = new QuizClassP4(1);
         echo "<h2 style='background-color: #5fda5f' >Question is correctly modified. Go to the quiz to see it!</h2>";
     }
     ?>
-    <a class="again" href="index.html">Menu</a>
+    <a class="again" href="index.php">Menu</a>
     <?php $quiz->showQuestionsToUpdate();
     if (isset($_POST['handle_question'])){
 

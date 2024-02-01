@@ -21,7 +21,7 @@
         echo "<h2 style='background-color: #5fda5f' >Question is added to the quiz!</h2>";
     }
     ?>
-    <a class="again" href="index.html">Menu</a>
+    <a class="again" href="index.php">Menu</a>
     <?php
         $quiz->showFormToAddQuestion();
         if (isset($_POST['handle_question'])){

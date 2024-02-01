@@ -16,7 +16,7 @@
 <body>
 
     <h1>read questions</h1>
-    <a class="again" href="index.html">Menu</a>
+    <a class="again" href="index.php">Menu</a>
     <?php $quiz->showOnlyquestions();?>
 </body>
 </html>

@@ -62,7 +62,7 @@ class User{
         if (password_verify($password, $storedPassword)){
             session_start();
             $_SESSION['username'] = $username;
-            header("Location: codigophp/Parte_4/quizFiles/index.html");
+            header("Location: quizFiles/index.php");
             mysqli_query($connection, $sql);
             mysqli_close($connection);
             exit;
@@ -90,5 +90,7 @@ class User{
         mysqli_query($connection, $sql);
         mysqli_close($connection);
     }
+
+
 
 }

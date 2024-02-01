@@ -1,13 +1,10 @@
 <?php
     include 'User.php';
 
-    if (isset($_POST['handleRegister'])){
+    function isnotAnswered($fieldName){
+        return $_SERVER["REQUEST_METHOD"] == "POST" && empty($_POST[$fieldName]) ? "<p class='p__error'>You must answer all questions</p>" : "";
 
-        $newUser = new User($_POST['newUsername'], $_POST['newEmail'], $_POST['newPassword']);
-
-        $newUser->register();
     }
-
 
 ?>
 
@@ -28,10 +25,25 @@
     <form method="post">
 
         <label>Email <input type="text" name="newEmail" style="width: 500px"></label>
+        <?= isnotAnswered('newEmail')?>
         <label>Username: <input  type="text" name="newUsername" style="background-color: antiquewhite"></label>
+        <?= isnotAnswered('newUsername')?>
         <label>Password: <input type="text" name="newPassword" style="background-color: antiquewhite"></label>
+        <?= isnotAnswered('newPassword')?>
 
         <button type="submit" name="handleRegister" class="again">Register</button>
+        <?php
+        if (!empty($_POST['newEmail']) && !empty($_POST['newUsername']) && !empty($_POST['newPassword'])) {
+
+            $newUser = new User($_POST['newUsername'], $_POST['newEmail'], $_POST['newPassword']);
+
+            $newUser->register();
+            echo "<p style='color: #5fda5f'>You are now registered!<p>";
+        }
+
+        ?>
+
+
     </form>
 
 
